@@ -20,6 +20,12 @@ IsNumber () {
   		echo "please input number"
 		exit
 	fi
+
+	if [ $x -eq 0 ] && [ $y -eq 0 ]; then
+  		echo "don't input 0 and 0"
+		exit
+	fi
+
 }
 
 x=$m
@@ -27,7 +33,7 @@ y=$n
 
 IsNumber $x $y
 
-if [ $x  -gt $y ] && [ $y  -eq 0 ]; then
+if [ $x -gt $y ]; then
 	x=$n
 	y=$m
 fi
