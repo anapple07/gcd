@@ -41,7 +41,7 @@ fi
 r=1
 until [ $r == 0 ]
 do
-   let "r =$x % $y"
+   r=`expr $x % $y`
    x=$y
    y=$r
 done
