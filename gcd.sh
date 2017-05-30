@@ -1,10 +1,5 @@
 #!/bin/sh
 
-echo -n "please input first number:"
-read m
-
-echo -n "please input second number:"
-read n
 
 IsNumber () {
     x=$1
@@ -22,20 +17,20 @@ IsNumber () {
     fi
 
     if [ $x -eq 0 ] && [ $y -eq 0 ]; then
-        echo "don't input 0 and 0"
+        echo "dont input 0 and 0"
         exit
     fi
 
 }
 
-x=$m
-y=$n
+x=$1
+y=$2
 
 IsNumber $x $y
 
 if [ $x -gt $y ]; then
-    x=$n
-    y=$m
+    x=$2
+    y=$1
 fi
 
 r=1
