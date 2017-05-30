@@ -39,7 +39,7 @@ if [ $x -gt $y ]; then
 fi
 
 r=1
-until [ $r == 0 ]
+while [ "$r" -eq 0 ]
 do
    r=`expr $x % $y`
    x=$y
